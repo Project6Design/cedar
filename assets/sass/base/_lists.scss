@@ -1,0 +1,59 @@
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+.wysiwyg {
+  ul,
+  ol {
+    margin: 1rem;
+    padding-left: 2rem;
+
+    li {
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      padding-left: 1rem;
+      list-style-type: circle;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    ul {
+      padding-left: 1rem;
+      list-style-type: lower-latin;
+    }
+  }
+
+  @include screen-medium-down {
+    ul,
+    ol {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

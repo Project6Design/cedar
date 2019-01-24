@@ -1,0 +1,29 @@
+<header id="header" >
+  <div class="container">
+
+    <div id="logo" role="banner">
+      <a href="/" rel="home">
+        LOGO
+        {# <img src="{{ site.theme.link }}/images/logo.svg" alt="Logo" width="716" height="313"> #}
+      </a>
+    </div>
+
+    <nav id="nav-main" class="nav-main navigation" role="navigation">
+      {% include "partials/menu.twig" with {'menu': menu.main} %}
+    </nav>
+
+    <div id="trigger-search-wrapper">
+      <a href="#search-form" aria-label="Search" data-lity>
+        <svg class="icon"><use xlink:href="{{ site.theme.link }}/public/images/icons.svg#search"></use></svg>
+      </a>
+    </div>
+
+    {% include "forms/search.twig" %}
+
+    <div id="trigger-mobile-menu-wrapper">
+      <a href="#nav-mobile">
+        <svg class="icon"><use xlink:href="{{ site.theme.link }}/public/images/icons.svg#menu"></use></svg>
+      </a>
+    </div>
+  </div>
+</header>

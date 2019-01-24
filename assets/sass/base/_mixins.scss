@@ -1,0 +1,11 @@
+@mixin screen-large-down {
+  @media (max-width: #{$screen-large}) {
+    @content;
+  }
+}
+
+@mixin screen-medium-down {
+  @media (max-width: #{$screen-medium}) {
+    @content;
+  }
+}

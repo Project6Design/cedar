@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <article class="taxonomy-term taxonomy--{{ term.sections }}" id="term-{{ term.ID }}">
+
+    <section class="term__content">
+      <div class="container">
+        <div class="term__name">
+          <h1>{{ term.name }}</h1>
+        </div>
+
+        <div class="term__posts">
+          <ul>
+          {% for post in posts %}
+            <li>
+              <span class="post__title">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+              </span>
+              <span class="post__type">({{ post.type }})</span>
+            </li>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+{% endblock %}

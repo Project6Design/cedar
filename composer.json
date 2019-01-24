@@ -1,0 +1,16 @@
+{
+    "name": "Project6Design/cedar",
+    "description": "Wordpress starter theme based on Timber.",
+    "license": "MIT",
+    "type": "wordpress-theme",
+    "homepage": "https://github.com/Project6Design/cedar",
+    "authors": [
+        {
+            "name": "Johannes Schmidt",
+            "email": "johannes@project6.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    }
+}

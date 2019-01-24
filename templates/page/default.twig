@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <article class="page container" id="page-{{ post.ID }}">
+    <section class="page__header">
+
+      <div class="page__title">
+        <h1>{{ post.title }}</h1>
+      </div>
+
+    </section>
+
+    <section class="page__content">
+
+      <div class="page__body wysiwyg">{{ post.content|wpautop|shortcodes|relative_links }}</div>
+
+    </section>
+  </article>
+
+{% endblock %}

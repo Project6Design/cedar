@@ -1,0 +1,3 @@
+void 0===window.SITE&&(window.SITE={}),SITE.mainMenuScroll=function(){$(window).scroll(function(){0<$(window).scrollTop()?$("#header").addClass("scrolling"):$("#header").removeClass("scrolling")})},$(function(){svg4everybody(),SITE.mainMenuScroll()});
+void 0===window.SITE&&(window.SITE={}),$(function(){var i=$("#nav-mobile").mmenu({navbar:!1,extensions:["theme-dark","position-right"],slidingSubmenus:!0}),n=$("#trigger-mobile-menu-wrapper"),e=i.data("mmenu");n.on("click",function(){e.open()}),e.bind("open:finish",function(){setTimeout(function(){n.addClass("is-active")},100)}),e.bind("close:finish",function(){setTimeout(function(){n.removeClass("is-active")},100)})});
+//# sourceMappingURL=site.js.map

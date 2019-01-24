@@ -1,0 +1,11 @@
+#trigger-mobile-menu-wrapper {
+  display: none;
+
+  a {
+    color: $action-color;
+  }
+
+  @include screen-medium-down {
+    display: inline-block;
+  }
+}

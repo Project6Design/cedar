@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <article class="page" id="page-search-results">
+
+    <section class="page__header">
+      <div class="page__title">
+        <h1>Results for "{{ search_query }}"</h1>
+      </div>
+
+    </section>
+
+    <section class="page__content">
+      {% if search_results %}
+        <ul>
+          {% for sr in search_results %}
+            <li class="search-result search-result--{{ sr.type|lower }}">
+              <div class="search-result__type">{{ sr.type }}</div>
+              <div class="search-result__title">
+                <a href="{{ sr.link }}" class="title-link">{{ sr.title }}</a>
+              </div>
+              <div class="search-result__summary">{{ sr.summary|truncate(50, true) }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% include "partials/pager.twig" %}
+      {% else %}
+        <h2>There are no results for "{{ search_query }}".</h2>
+      {% endif %}
+    </section>
+  </article>
+
+{% endblock %}
